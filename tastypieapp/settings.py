@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 # settings.APPEND_SLASH =False
-TASTYPIE_CANNED_ERROR = 'Sorry, this request could not be processed. please try again later.'
+TASTYPIE_CANNED_ERROR = 'Sorry, this request could not be processed. please try again later.pip'
 # Application definition
 
 INSTALLED_APPS = [

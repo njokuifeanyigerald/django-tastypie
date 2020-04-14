@@ -26,8 +26,8 @@ SECRET_KEY = '4$fifk*p4y-je-i@9t%2*h+t1w@0p4j&rw(edgrb4!s20x8wgt'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
+# settings.APPEND_SLASH =False
+TASTYPIE_CANNED_ERROR = 'Sorry, this request could not be processed. please try again later.'
 # Application definition
 
 INSTALLED_APPS = [

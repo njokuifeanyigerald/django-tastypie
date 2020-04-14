@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Tastypie
+from .models import Myway
 
-admin.site.register(Tastypie)
+admin.site.register(Myway)

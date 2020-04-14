@@ -1,9 +1,14 @@
 from django.urls import path, include
-from .api import tastypie_resource
+from .api import myway_resource, user_rescource
+from tastypie.api import Api
 
-# entry_resource = EntryResource()
+api = Api(api_name='v1')
+api.register(myway_resource)
+api.register(user_rescource)
+
+
 
 urlpatterns = [
     # The normal jazz here...
-    path('api/', include(tastypie_resource.urls)),
+    path('api/', include(api.urls)),
 ]

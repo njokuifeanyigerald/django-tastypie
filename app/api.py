@@ -1,10 +1,23 @@
 from tastypie.resources import ModelResource
-from .models import Tastypie
+from .models import Myway
+from django.contrib.auth.models import User
+from tastypie import fields
 
-
-class TastypieResource(ModelResource):
+class UserResource(ModelResource):
     class Meta:
-        queryset = Tastypie.objects.all()
-        resource_name = 'tastypie'
+        queryset = User.objects.all()
+        resource_name = 'user'
+        excludes = ['password','is_active', "is_staff", "is_superuser",'email']
+        allowed_methods = ['get']
 
-tastypie_resource = TastypieResource()
+
+class MywayRescource(ModelResource):
+    user = fields.ForeignKey(UserResource, 'user')
+    class Meta:
+        queryset = Myway.objects.all()
+        resource_name = "myway"
+
+user_rescource =  UserResource()
+myway_resource = MywayRescource()
+
+
